@@ -30,7 +30,7 @@ services:
       context: .
       dockerfile: Dockerfile
       target: development
-    container_name: acquisitions-app-dev
+    container_name: api-devops-dev
     ports:
       - "${PORT:-3000}:3000"
     env_file:
@@ -47,9 +47,9 @@ services:
       neon-local:
         condition: service_healthy
     networks:
-      - acquisitions-dev
+      - api-devops-dev
     restart: unless-stopped
 
 networks:
-  acquisitions-dev:
+  api-devops-dev:
     driver: bridge

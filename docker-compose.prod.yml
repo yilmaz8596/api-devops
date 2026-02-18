@@ -37,8 +37,8 @@ services:
       retries: 3
       start_period: 40s
     networks:
-      - acquisitions-prod
+      - api-devops-prod
 
 networks:
-  acquisitions-prod:
+  api-devops-prod:
     driver: bridge
